@@ -24,14 +24,6 @@ public class Entity extends Parent {
     public ImageView appearance;
     public Direction direction = Direction.right;
     public Entity() {
-        this.timeLineController = new TimeLineController() {
-            @Override
-            public void tick() {
-                super.tick();
-                ticks();
-            }
-        };
-        this.timeLineController.initTimeLine();
     }
 
     public void ticks() {
@@ -47,8 +39,8 @@ public class Entity extends Parent {
         assert a != null;
         Image image = new Image(a);
         this.appearance = new ImageView(image);
-        this.appearance.setFitWidth(256);
-        this.appearance.setFitHeight(256);
+        this.appearance.setFitWidth(this.root.stage.getScene().getHeight()*0.3);
+        this.appearance.setFitHeight(this.root.stage.getScene().getHeight()*0.3);
     }
 
     public void delete() {

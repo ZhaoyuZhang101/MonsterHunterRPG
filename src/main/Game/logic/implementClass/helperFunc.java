@@ -1,5 +1,8 @@
 package Game.logic.implementClass;
 
+import javafx.scene.Parent;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import org.json.JSONObject;
 
 import java.io.*;
@@ -12,5 +15,12 @@ public interface helperFunc {
         int len =input.read(line);
         String text =new String(line,0,len);
         return new JSONObject(text);
+    }
+
+    static ImageView getImageViewFromAddress(Parent p, String address) {
+        InputStream a = p.getClass().getResourceAsStream(address);
+        assert a != null;
+        Image image = new Image(a);
+        return new ImageView(image);
     }
 }

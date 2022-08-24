@@ -12,7 +12,7 @@ public abstract class TimeLineController {
     public void initTimeLine() {
         timeline = new Timeline();
         timeline.setCycleCount(Timeline.INDEFINITE);
-        KeyFrame keyframe = new KeyFrame(Duration.millis(100), actionEvent -> tick());
+        KeyFrame keyframe = new KeyFrame(Duration.millis(10), actionEvent -> tick());
         timeline.getKeyFrames().add(keyframe);
         timeline.play();
     }

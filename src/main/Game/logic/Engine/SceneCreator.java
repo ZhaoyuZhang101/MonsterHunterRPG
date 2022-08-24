@@ -1,33 +1,46 @@
 package Game.logic.Engine;
 
-import Game.logic.implementClass.*;
 import Game.logic.Entities.Character.Guardian;
 import Game.logic.Entities.Character.Player;
 import Game.logic.Entities.Character.Swordsman;
 import Game.logic.Entities.Character.Wizard;
-import javafx.event.EventHandler;
+import Game.logic.implementClass.*;
 import javafx.scene.Parent;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.*;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.io.IOException;
+import java.util.*;
 
+// this class is used to manage all the logic concerned about scene building, and game preparation and setting.
 public class SceneCreator extends Parent {
+    private int playerTickCount = 0;
+    private boolean mapMoveStart = false;
+    private Direction mapMoveDirection;
     public GameProcess gameProcess;
     public Stage stage;
+    public List<ImageView> backgroundLayer = new ArrayList<>();
     public SceneCreator() {
         //initialize game process
         gameProcess = new GameProcess(this);
     }
 
+    // preparation load for game.
     public void load() throws IOException {
+        TimeLineController timeLineController = new TimeLineController() {
+            @Override
+            public void tick() {
+                super.tick();
+                ticks();
+            }
+        };
+        backgroundLoad(StringReminder.hillsLayer, 1, 4);
         loadPlayer(Career.swordsman);
+        backgroundLoad(StringReminder.hillsLayer, 5, 6);
         setKeyEvent();
     }
 
@@ -39,13 +52,13 @@ public class SceneCreator extends Parent {
     public void onKeyPressed(KeyEvent e) {
         if (gameProcess.player!=null && gameProcess.status.equals(gameStatus.start)) {
             if (e.getCode() == KeyCode.UP) {
-                gameProcess.player.moveUp();
+                gameProcess.player.moveUp(true);
             } else if (e.getCode() == KeyCode.DOWN) {
-                gameProcess.player.moveDown();
+                gameProcess.player.moveDown(true);
             } else if (e.getCode() == KeyCode.LEFT) {
-                gameProcess.player.moveLeft();
+                gameProcess.player.moveLeft(true);
             } else if (e.getCode() == KeyCode.RIGHT) {
-                gameProcess.player.moveRight();
+                gameProcess.player.moveRight(true);
             } else if (e.getCode() == KeyCode.SPACE) {
                 gameProcess.player.attack();
             }
@@ -53,9 +66,18 @@ public class SceneCreator extends Parent {
     }
 
     public void onKeyReleased(KeyEvent e) {
-        KeyCode[] keys = new KeyCode[] {KeyCode.UP,KeyCode.LEFT,KeyCode.DOWN,KeyCode.RIGHT};
-        if (Arrays.asList(keys).contains(e.getCode())) {
-            gameProcess.player.stop();
+        if (gameProcess.player!=null && gameProcess.status.equals(gameStatus.start)) {
+            if (e.getCode() == KeyCode.UP) {
+                gameProcess.player.moveUp(false);
+            } else if (e.getCode() == KeyCode.DOWN) {
+                gameProcess.player.moveDown(false);
+            } else if (e.getCode() == KeyCode.LEFT) {
+                gameProcess.player.moveLeft(false);
+            } else if (e.getCode() == KeyCode.RIGHT) {
+                gameProcess.player.moveRight(false);
+            } else if (e.getCode() == KeyCode.SPACE) {
+                gameProcess.player.attack();
+            }
         }
     }
 
@@ -63,6 +85,7 @@ public class SceneCreator extends Parent {
         this.stage = stage;
     }
 
+    //give a map name and load map data from json and show on the stage.
     public void readMap(String mapName) throws IOException {
         JSONObject mapJson = helperFunc.readJson(StringReminder.mapAddress);
         JSONObject maps = mapJson.getJSONObject(mapName).getJSONObject("mapContent");
@@ -76,6 +99,56 @@ public class SceneCreator extends Parent {
         }
     }
 
+    public void backgroundLoad(String backgroundName, int layerStart, int layerEnd) {
+        for (int i=layerStart; i<=layerEnd; i++) {
+            ImageView imageView = helperFunc.getImageViewFromAddress(this, StringReminder.hillLayerBaseAddress+StringReminder.hillsLayer+i+".png");
+            this.backgroundLayer.add(imageView);
+            getChildren().add(imageView);
+            imageView.setFitHeight(this.stage.getScene().getHeight());
+            imageView.setFitWidth(this.stage.getScene().getHeight()*1.5);
+        }
+
+    }
+
+    public void mapMove(Direction direction, boolean move) {
+        this.mapMoveStart = move;
+        this.mapMoveDirection = direction;
+        if (move) {
+            System.out.println("move");
+
+        }
+    }
+
+    public void ticks() {
+        for (int i=0; i<6; i++) {
+            ImageView image  = (ImageView) this.backgroundLayer.toArray()[i];
+            image.setFitHeight(this.stage.getScene().getHeight());
+            image.setFitWidth(this.stage.getScene().getHeight()*1.5);
+        }
+        playerTickCount = (playerTickCount + 1)%5;
+        if (playerTickCount==0) {
+            this.gameProcess.player.ticks();
+        }
+
+        if (mapMoveStart) {
+            switch (mapMoveDirection) {
+                case left -> {
+                    for (int i = 0; i < 6; i++) {
+                        ImageView image = (ImageView) this.backgroundLayer.toArray()[i];
+                        image.setLayoutX(image.getLayoutX() + (i) + 0.1);
+                    }
+                }
+                case right -> {
+                    for (int i = 0; i < 6; i++) {
+                        ImageView image = (ImageView) this.backgroundLayer.toArray()[i];
+                        image.setLayoutX(image.getLayoutX() - (i) - 0.1);
+                    }
+                }
+            }
+        }
+    }
+
+    // create player by giving career and load player data from json to player class.
     public void loadPlayer(Career career) throws IOException {
         JSONObject mapJson = helperFunc.readJson(StringReminder.playerValueAddress);
         JSONObject playerValue = mapJson.getJSONObject(career.toString());

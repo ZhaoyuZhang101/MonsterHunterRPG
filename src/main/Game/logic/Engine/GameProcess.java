@@ -3,11 +3,7 @@ package Game.logic.Engine;
 import Game.logic.Entities.Character.Player;
 import Game.logic.implementClass.gameStatus;
 import javafx.scene.Group;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class GameProcess {
     public gameStatus status;
