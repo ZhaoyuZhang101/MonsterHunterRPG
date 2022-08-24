@@ -1,0 +1,16 @@
+{
+  "data1": {
+    "playerName": null,
+    "playerStatus": {
+      "career": "swordsman",
+      "life": 0,
+      "magic": 0,
+      "defense": 0
+    },
+    "playerEquipment": [],
+    "recentProcess": {
+      "map": "",
+      "chapter": ""
+    }
+  }
+}
