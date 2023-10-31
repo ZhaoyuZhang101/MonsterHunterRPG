@@ -1,15 +1,17 @@
 {
-  "soldier": {
-    "hp": 1,
+  "skeleton": {
+    "hp": 3,
     "defense": 0,
     "damage": 1,
+    "magic": 0,
     "skill": [],
     "collision": [1, 1]
   },
-  "boss": {
+  "dragon": {
     "hp": 10,
     "defense": 0,
     "damage": 2,
+    "magic": 0,
     "skill": ["circle_slash"],
     "collision": [2, 2]
   }

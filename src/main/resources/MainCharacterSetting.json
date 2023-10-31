@@ -1,0 +1,45 @@
+{
+  "Simon Greene": {
+    "dialog": [
+      "I love you, Son!",
+      "Take care of your Mother.",
+      "I'll be back soon."
+    ]
+  },
+
+  "Head Bandit": {
+    "dialog": [
+      "Look what we have here!",
+      "Hah! 5 against 1 seems hardly fair!... Tell you what if you defeat one of my bandits I'll let you go... What?! This armour? Well if you want this armour you'll have to defeat me!",
+      "YOU!?!? Defeated my bandits!!!!... fair is fair here's your armour. Although you defeated us I'd like to see you try defeat the soliders of Bathien!"
+    ]
+  },
+
+  "Bar Keep": {
+    "dialog": [
+      "Your Father used to come here a lot. You look just like him. Traitor he was... So you've come to avenge him huh? He's not worth saving!... He's a good man HA! He cost me my family so I have nothing to loose.",
+      "*puff* *puff* You fight like your Father too! Congratulations. *spit*... Where can you find him? Huh? You can find him at the kingdom."
+    ]
+  },
+
+  "Cloaked Simon Greene": {
+    "dialog": [
+      "Do you recognise me??... No!? Look at how you've grown.... Still don't recognise me?.. What? You want the Princess?? Well... you'll have to fight me.",
+      "You've gotten better since the last time I saw you... never knew my sword would be my own down fall!... Yes, my sword we made that together don't you remember??"
+    ]
+  },
+
+  "Uncloaked Simon Greene": {
+    "dialog": [
+      "I came with a large group of men to fight for our kingdom. We fought and fought but atlas we were outnumbered. The soldiers were fascinated by the craftmanship of our armour and weaponry",
+      "They spared our lives and took us to the King. He asked about our armoury and weaponry and demanded to know who crafted such fine metal. We stood silently.",
+      "He declared it was our lives or the man who crafted such metal. I stood up and offered my skills for their lives.",
+      "I was taken in another room as I heard the cries of the men. I had been tricked. But it was too late I had to live for you.",
+      "So I crafted weaponry after weaponry, armour after armour.",
+      "I asked the King if I could leave to come back to you. But he refused. However finally he said.",
+      "If I kidnap the Princess and bring her back he will spare me and I can return to you.",
+      "Don't you see son this is all for you! We can go home now!... The princess?! No we must leave her!... If we don't they will come for me",
+      "Okay lets fight together! Lets go grab the Princess!"
+    ]
+  }
+}

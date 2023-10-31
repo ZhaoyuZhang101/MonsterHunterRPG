@@ -10,8 +10,8 @@ module Main {
     requires org.json;
     requires javafx.graphics;
 
-    exports Game.main;
+    exports Game.Core;
 
-    opens Game.main to
+    opens Game.Core to
             javafx.fxml;
 }

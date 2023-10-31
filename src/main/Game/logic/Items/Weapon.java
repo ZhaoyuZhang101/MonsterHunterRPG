@@ -1,8 +1,9 @@
 package Game.logic.Items;
 
 import Game.logic.implementClass.WeaponType;
+import javafx.scene.Parent;
 
-public class Weapon {
+public class Weapon extends Parent {
     public String name;
     public int damage;
     public WeaponType type;

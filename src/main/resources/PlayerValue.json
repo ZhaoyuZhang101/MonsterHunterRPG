@@ -1,6 +1,6 @@
 {
   "swordsman": {
-    "hp": 4,
+    "hp": 5,
     "magic": 2,
     "defense": 2,
     "damage": 1,
@@ -18,7 +18,7 @@
     "collision": [1, 1]
   },
   "guardian": {
-    "hp": 5,
+    "hp": 7,
     "magic": 0,
     "defense": 3,
     "damage": 1,
