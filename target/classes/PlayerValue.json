@@ -1,0 +1,29 @@
+{
+  "swordsman": {
+    "hp": 5,
+    "magic": 2,
+    "defense": 2,
+    "damage": 1,
+    "skill": ["impact", "circle_slash"],
+    "weapon": "rocky_sword",
+    "collision": [1, 1]
+  },
+  "wizard": {
+    "hp": 3,
+    "magic": 4,
+    "defense": 1,
+    "damage": 1,
+    "skill": ["fire_ball", "blizzard"],
+    "weapon": "rocky_staff",
+    "collision": [1, 1]
+  },
+  "guardian": {
+    "hp": 7,
+    "magic": 0,
+    "defense": 3,
+    "damage": 1,
+    "skill": ["shield", "improve"],
+    "weapon": "rocky_shield",
+    "collision": [1, 1]
+  }
+}

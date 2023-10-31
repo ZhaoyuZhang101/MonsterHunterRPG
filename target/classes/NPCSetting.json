@@ -1,0 +1,53 @@
+{
+  "villager_01": {
+    "dialog": [
+      "No, it's too dangerous!!",
+      "I'll miss you.",
+      "Stay Safe!"
+    ]
+  },
+
+  "adventure_01": {
+    "dialog": [
+      "Good Luck young man!",
+      "What are you doing standing here! Go on."
+    ]
+  },
+
+  "barkeep": {
+    "dialog": [
+      "Don't talk to me!!",
+      "Stay away from the skeleton! They will eat you up boy!",
+      "You don't even have any armour on! Maybe if you defeat the bandits you can keep the stolen armour"
+    ]
+  },
+
+  "skeleton": {
+    "dialog": [
+      "Hahaha! You think you can defeat us.",
+      "Where did you get your sword from? The dumpster! Hahaha."
+    ]
+  },
+
+  "beggar": {
+    "dialog": [
+      "What are you doing here?",
+      "Don't talk to me! Can't you see I'm busyyyy .... zzz.. zzz... zzz...."
+    ]
+  },
+
+  "witch": {
+    "dialog": [
+      "new potion, ohh!",
+      "Do you want a deal?"
+    ]
+  },
+
+  "princess": {
+    "dialog": [
+      "Thank your for saving me."
+    ]
+  }
+
+
+}

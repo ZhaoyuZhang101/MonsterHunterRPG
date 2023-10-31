@@ -1,0 +1,15 @@
+{
+  "recentProcess": {"map": "map2"},
+  "playerStatus": {
+    "magic": 2,
+    "damage": 5,
+    "career": "swordsman",
+    "level": 4,
+    "defense": 2,
+    "hp_limit": 7,
+    "hp": 7,
+    "magic_limit": 2,
+    "exp": 60,
+    "exp_limit": 120
+  }
+}

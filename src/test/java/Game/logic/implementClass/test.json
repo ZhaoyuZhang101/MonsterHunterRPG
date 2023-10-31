@@ -1,0 +1,11 @@
+{
+  "str_key": "test string",
+  "int_key": 123,
+  "bool_key": true,
+  "arr_key": [
+    "foo", "bar"
+  ],
+  "obj_key": {
+    "key": "val"
+  }
+}

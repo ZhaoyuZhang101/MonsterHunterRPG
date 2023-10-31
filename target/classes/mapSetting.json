@@ -1,0 +1,67 @@
+{
+  "map1": {
+    "mapName": "map1",
+    "background": "hills_layer",
+    "difficulty": 0,
+    "story": "scenario1",
+    "mapContent": [
+      {"platformType": "Grass", "distance": 0, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "skeleton", "NPCType": "", "building":  "status", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 2, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 4, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 6, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "villager_01", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 8, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "wall", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 10, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "wall", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 12, "height": 1, "monsterGenerateRate": 1.0, "monsterType": "skeleton", "NPCType": "", "building":  "wall", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 14, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "witch", "building":  "well", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 16, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "wall","last": "", "front": ""},
+      {"platformType": "Grass", "distance": 18, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 20, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 22, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 24, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "beggar", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 26, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 28, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 30, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "skeleton", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 34, "height": 2, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "", "last": "map2", "front":""}
+    ]
+  },
+  "map2": {
+    "mapName": "map2",
+    "background": "forest_layer",
+    "difficulty": 2,
+    "story": "scenario2",
+    "mapContent": [
+      {"platformType": "Grass", "distance": 0, "height": 1, "monsterGenerateRate": 0.5, "monsterType": "skeleton", "NPCType": "adventurer_01", "building":  "", "last": "", "front": "map1"},
+      {"platformType": "Grass", "distance": 2, "height": 1, "monsterGenerateRate": 0.5, "monsterType": "", "NPCType": "dog", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 4, "height": 1, "monsterGenerateRate": 1.0, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 5, "height": 1, "monsterGenerateRate": 1.0, "monsterType": "skeleton", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 7, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 8, "height": 1, "monsterGenerateRate": 1.1, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 10, "height": 1, "monsterGenerateRate": 1.0, "monsterType": "skeleton", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 13, "height": 1, "monsterGenerateRate": 1.0, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 15, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building": "", "last": "map3", "front": ""}
+    ]
+  },
+  "map3": {
+    "mapName": "map3",
+    "background": "forest_layer",
+    "difficulty": 3,
+    "story": "scenario3",
+    "mapContent": [
+      {"platformType": "Grass", "distance": 0, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "skeleton", "NPCType": "", "building":  "", "last": "", "front": "map1"},
+      {"platformType": "Grass", "distance": 2, "height": 1.5, "monsterGenerateRate": 1.0, "monsterType": "skeleton", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 4, "height": 2, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 6, "height": 1, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 8, "height": 1.6, "monsterGenerateRate": 0.5, "monsterType": "skeleton", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 10, "height": 1.2, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 12, "height": 1, "monsterGenerateRate": 1.0, "monsterType": "skeleton", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 14, "height": 1, "monsterGenerateRate": 1.0, "monsterType": "", "NPCType": "", "building":  "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 16, "height": 1, "monsterGenerateRate": 1.0, "monsterType": "dragon", "NPCType": "", "building": "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 18, "height": 1.5, "monsterGenerateRate": 1.0, "monsterType": "", "NPCType": "princess", "building": "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 20, "height": 2, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building": "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 20, "height": 2, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building": "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 20, "height": 3, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building": "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 20, "height": 4, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building": "", "last": "", "front": ""},
+      {"platformType": "Grass", "distance": 20, "height": 5, "monsterGenerateRate": 0.1, "monsterType": "", "NPCType": "", "building": "", "last": "", "front": ""}
+    ]
+  }
+}
